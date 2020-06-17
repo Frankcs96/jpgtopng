@@ -17,11 +17,11 @@ def convert_imgs(path):
     photos = os.listdir(os.getcwd() + "\\photos")
 
     for photo in photos:
-        print(photo)
+        print("Converting " + photo + " ...")
         img = Image.open(os.getcwd() + "\\photos\\" + photo)
         photo_no_extension = remove_extension(photo)
         img.save(path + "\\" + photo_no_extension + ".png", "png")
-        print(photo + " converted")
+        print("converted!\n")
 
 
 def main():
